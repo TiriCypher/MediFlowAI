@@ -322,9 +322,15 @@ def get_alert(
 
 # --------------------------------------------------
 # MARK ALERT AS READ
-# PATIENT ONLY
 #
-# Patient can only mark their own alert as READ.
+# ADMIN / STAFF:
+#     Can mark any alert as READ.
+#
+# PATIENT:
+#     Can mark own alert as READ only.
+#
+# DOCTOR:
+#     Read-only access. Cannot change alert status.
 # --------------------------------------------------
 
 @router.patch(
@@ -335,29 +341,9 @@ def mark_alert_as_read(
     alert_id: int,
     db: Session = Depends(get_db),
     current_user: User = Depends(
-        require_roles("PATIENT")
+        get_current_user
     ),
 ):
-    # ----------------------------------------------
-    # FIND PATIENT PROFILE LINKED TO CURRENT USER
-    # ----------------------------------------------
-
-    patient = db.scalar(
-        select(Patient).where(
-            Patient.user_id
-            == current_user.id
-        )
-    )
-
-    if not patient:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=(
-                "Patient profile is not linked "
-                "to this account."
-            ),
-        )
-
     # ----------------------------------------------
     # FIND ALERT
     # ----------------------------------------------
@@ -373,26 +359,71 @@ def mark_alert_as_read(
             detail="Alert not found.",
         )
 
+    role = current_user.role.upper()
+
     # ----------------------------------------------
-    # OBJECT-LEVEL AUTHORIZATION
+    # ADMIN / STAFF
+    # MAY MARK ANY ALERT AS READ
     # ----------------------------------------------
 
-    if alert.patient_id != patient.id:
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail=(
-                "You can only update "
-                "your own alerts."
-            ),
+    if role in {
+        "ADMIN",
+        "STAFF",
+    }:
+        alert.status = "READ"
+
+        db.commit()
+        db.refresh(alert)
+
+        return alert
+
+    # ----------------------------------------------
+    # PATIENT
+    # MAY UPDATE OWN ALERT ONLY
+    # ----------------------------------------------
+
+    if role == "PATIENT":
+
+        patient = db.scalar(
+            select(Patient).where(
+                Patient.user_id
+                == current_user.id
+            )
         )
 
+        if not patient:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail=(
+                    "Patient profile is not linked "
+                    "to this account."
+                ),
+            )
+
+        if alert.patient_id != patient.id:
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail=(
+                    "You can only update "
+                    "your own alerts."
+                ),
+            )
+
+        alert.status = "READ"
+
+        db.commit()
+        db.refresh(alert)
+
+        return alert
+
     # ----------------------------------------------
-    # MARK AS READ
+    # ALL OTHER ROLES
     # ----------------------------------------------
 
-    alert.status = "READ"
-
-    db.commit()
-    db.refresh(alert)
-
-    return alert
+    raise HTTPException(
+        status_code=status.HTTP_403_FORBIDDEN,
+        detail=(
+            "You do not have permission "
+            "to update alerts."
+        ),
+    )
