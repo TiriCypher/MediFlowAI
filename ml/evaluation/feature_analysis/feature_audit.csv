@@ -1,0 +1,30 @@
+feature,dtype,missing_percent,unique_values,decision,reason
+los_days,int64,0.0,65,REVIEW,"Length of stay is known at discharge. Valid for discharge-time prediction, but unavailable at admission."
+admit_type,str,0.0,3,KEEP,Potentially useful predictive feature.
+ward_type,str,0.0,4,KEEP,Potentially useful predictive feature.
+discharge_type,str,0.0,4,REVIEW,"Known at discharge. Valid for discharge-time prediction, but leakage for admission-time prediction."
+num_procedures,int64,0.0,15,KEEP,Potentially useful predictive feature.
+charlson_index,int64,0.0,7,KEEP,Potentially useful predictive feature.
+hba1c,float64,0.0,96,KEEP,Potentially useful predictive feature.
+creatinine,float64,0.0,1013,KEEP,Potentially useful predictive feature.
+haemoglobin,float64,0.0,141,KEEP,Potentially useful predictive feature.
+systolic_bp,int64,0.0,148,KEEP,Potentially useful predictive feature.
+age,int64,0.0,96,KEEP,Potentially useful predictive feature.
+gender,str,0.0,3,KEEP,Potentially useful predictive feature.
+state,str,0.0,15,KEEP,Potentially useful predictive feature.
+bpl_card,bool,0.0,2,REVIEW,Administrative/socio-economic feature. Potentially useful for Indian hospital context but should be checked for fairness and unnecessary dependence.
+insurance_type,str,0.0,4,REVIEW,Administrative/socio-economic feature. Potentially useful for Indian hospital context but should be checked for fairness and unnecessary dependence.
+comorbidity_count,int64,0.0,9,KEEP,Potentially useful predictive feature.
+prev_admissions,int64,0.0,9,KEEP,Potentially useful predictive feature.
+hospital_state,str,0.0,15,KEEP,Potentially useful predictive feature.
+tier,str,0.0,3,KEEP,Potentially useful predictive feature.
+beds,int64,0.0,33,KEEP,Potentially useful predictive feature.
+teaching,bool,0.0,2,KEEP,Potentially useful predictive feature.
+diagnosis_count,int64,0.0,4,KEEP,Potentially useful predictive feature.
+primary_diagnosis_category,str,0.0,11,KEEP,Potentially useful predictive feature.
+age_group,str,0.0,5,REVIEW,Engineered categorical representation of an existing numeric feature. Useful for categorical models but may be redundant.
+comorbidity_level,str,35.73,3,REVIEW,Engineered categorical representation of an existing numeric feature. Useful for categorical models but may be redundant. Missing values: 35.73%.
+previous_admission_level,str,45.62,3,REVIEW,Engineered categorical representation of an existing numeric feature. Useful for categorical models but may be redundant. Missing values: 45.62%.
+los_group,str,0.0,5,REVIEW,Engineered categorical representation of an existing numeric feature. Useful for categorical models but may be redundant.
+admission_year,int64,0.0,10,REVIEW,"Time-derived feature. May capture temporal patterns, but should be monitored for dataset/time drift."
+admission_month,int64,0.0,12,REVIEW,"Time-derived feature. May capture temporal patterns, but should be monitored for dataset/time drift."

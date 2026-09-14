@@ -1,0 +1,78 @@
+feature,importance,absolute_importance
+num__charlson_index,0.34017452117796665,0.34017452117796665
+num__los_days,0.26907738707007156,0.26907738707007156
+cat__discharge_type_Expired,0.15313720773115666,0.15313720773115666
+num__comorbidity_count,0.0387535238980267,0.0387535238980267
+num__prev_admissions,0.029744196831723205,0.029744196831723205
+num__haemoglobin,0.026943798640959825,0.026943798640959825
+cat__ward_type_ICU,0.025572584707590513,0.025572584707590513
+num__diagnosis_count,0.020283052267880936,0.020283052267880936
+num__bpl_card,0.014085326907162497,0.014085326907162497
+num__age,0.013636141595428343,0.013636141595428343
+cat__ward_type_General,0.01311742696593302,0.01311742696593302
+cat__insurance_type_Private,0.011142696157225922,0.011142696157225922
+cat__discharge_type_LAMA,0.008421177363654242,0.008421177363654242
+cat__admit_type_Emergency,0.006698325735830295,0.006698325735830295
+num__beds,0.00444256660185713,0.00444256660185713
+cat__insurance_type_Ayushman,0.003352724769467804,0.003352724769467804
+num__admission_month,0.0028896685506733058,0.0028896685506733058
+num__systolic_bp,0.002623917968235082,0.002623917968235082
+cat__primary_diagnosis_category_Neoplasm,0.002275846192181652,0.002275846192181652
+cat__primary_diagnosis_category_Infectious,0.0022616455698007405,0.0022616455698007405
+num__hba1c,0.0021992704079683875,0.0021992704079683875
+num__creatinine,0.0014149381527045002,0.0014149381527045002
+cat__primary_diagnosis_category_Gastrointestinal,0.001291692078947951,0.001291692078947951
+cat__primary_diagnosis_category_Obstetric,0.0010868108406211696,0.0010868108406211696
+cat__primary_diagnosis_category_Respiratory,0.000924809505067401,0.000924809505067401
+cat__state_Karnataka,0.0009158628862787388,0.0009158628862787388
+num__teaching,0.0008576781191008348,0.0008576781191008348
+cat__hospital_state_Tamil Nadu,0.000781952109827349,0.000781952109827349
+cat__primary_diagnosis_category_Cardiovascular,0.000617059182881128,0.000617059182881128
+cat__hospital_state_Haryana,0.0005998095046690551,0.0005998095046690551
+cat__admit_type_OPD,0.000384492310809663,0.000384492310809663
+num__num_procedures,0.00029188819601137664,0.00029188819601137664
+cat__gender_F,2.286566203604975e-12,2.286566203604975e-12
+cat__state_Haryana,0.0,0.0
+cat__state_Kerala,0.0,0.0
+cat__state_Madhya Pradesh,0.0,0.0
+cat__state_Andhra Pradesh,0.0,0.0
+cat__gender_Other,0.0,0.0
+cat__gender_M,0.0,0.0
+cat__state_Gujarat,0.0,0.0
+cat__admit_type_Elective,0.0,0.0
+cat__discharge_type_Recovered,0.0,0.0
+cat__discharge_type_Referred,0.0,0.0
+cat__ward_type_HDU,0.0,0.0
+cat__ward_type_NICU,0.0,0.0
+cat__state_West Bengal,0.0,0.0
+cat__state_Uttar Pradesh,0.0,0.0
+cat__state_Telangana,0.0,0.0
+cat__state_Tamil Nadu,0.0,0.0
+cat__state_Punjab,0.0,0.0
+cat__state_Rajasthan,0.0,0.0
+cat__state_Odisha,0.0,0.0
+cat__state_Maharashtra,0.0,0.0
+cat__state_Bihar,0.0,0.0
+cat__hospital_state_Kerala,0.0,0.0
+cat__hospital_state_Karnataka,0.0,0.0
+cat__insurance_type_Unknown,0.0,0.0
+cat__hospital_state_Andhra Pradesh,0.0,0.0
+cat__hospital_state_Bihar,0.0,0.0
+cat__hospital_state_Gujarat,0.0,0.0
+cat__insurance_type_ESI,0.0,0.0
+cat__hospital_state_Telangana,0.0,0.0
+cat__hospital_state_Rajasthan,0.0,0.0
+cat__hospital_state_Punjab,0.0,0.0
+cat__hospital_state_Odisha,0.0,0.0
+cat__hospital_state_Madhya Pradesh,0.0,0.0
+cat__hospital_state_Maharashtra,0.0,0.0
+cat__hospital_state_Uttar Pradesh,0.0,0.0
+cat__hospital_state_West Bengal,0.0,0.0
+cat__primary_diagnosis_category_Endocrine,0.0,0.0
+cat__tier_tier3,0.0,0.0
+cat__tier_tier1,0.0,0.0
+cat__tier_tier2,0.0,0.0
+cat__primary_diagnosis_category_Injury,0.0,0.0
+cat__primary_diagnosis_category_Genitourinary,0.0,0.0
+cat__primary_diagnosis_category_Neurological,0.0,0.0
+cat__primary_diagnosis_category_Perinatal,0.0,0.0

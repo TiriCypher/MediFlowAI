@@ -1,0 +1,7 @@
+feature,unique_values,unique_ratio_percent
+los_days,65,0.05
+hba1c,96,0.08
+creatinine,1013,0.84
+haemoglobin,141,0.12
+systolic_bp,148,0.12
+age,96,0.08

@@ -1,0 +1,39 @@
+MediFlow AI - Readmission Model Evaluation
+======================================================================
+
+
+Logistic Regression
+----------------------------------------------------------------------
+                precision    recall  f1-score   support
+
+No Readmission       0.95      0.71      0.81     21158
+   Readmission       0.24      0.70      0.36      2842
+
+      accuracy                           0.71     24000
+     macro avg       0.59      0.70      0.59     24000
+  weighted avg       0.86      0.71      0.76     24000
+
+
+Decision Tree
+----------------------------------------------------------------------
+                precision    recall  f1-score   support
+
+No Readmission       0.94      0.68      0.79     21158
+   Readmission       0.23      0.70      0.34      2842
+
+      accuracy                           0.68     24000
+     macro avg       0.59      0.69      0.57     24000
+  weighted avg       0.86      0.68      0.74     24000
+
+
+Random Forest
+----------------------------------------------------------------------
+                precision    recall  f1-score   support
+
+No Readmission       0.94      0.75      0.83     21158
+   Readmission       0.26      0.66      0.37      2842
+
+      accuracy                           0.74     24000
+     macro avg       0.60      0.70      0.60     24000
+  weighted avg       0.86      0.74      0.78     24000
+

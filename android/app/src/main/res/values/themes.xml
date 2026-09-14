@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style
+        name="Theme.MediFlowAI"
+        parent="android:style/Theme.Material.Light.NoActionBar">
+
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">#F7FAFC</item>
+        <item name="android:navigationBarColor">#F7FAFC</item>
+
+    </style>
+
+    <style
+        name="Theme.MediFlowAI.Starting"
+        parent="Theme.SplashScreen">
+
+        <item name="windowSplashScreenBackground">#F7FAFC</item>
+
+        <item name="windowSplashScreenAnimatedIcon">
+            @drawable/mediflow_ai_icon
+        </item>
+
+        <item name="postSplashScreenTheme">
+            @style/Theme.MediFlowAI
+        </item>
+
+    </style>
+
+</resources>

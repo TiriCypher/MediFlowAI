@@ -1,0 +1,17 @@
+feature,target_correlation,absolute_correlation
+los_days,0.2182,0.2182
+comorbidity_count,0.2176,0.2176
+charlson_index,0.1992,0.1992
+diagnosis_count,0.193,0.193
+prev_admissions,0.1584,0.1584
+age,0.1564,0.1564
+num_procedures,0.155,0.155
+haemoglobin,-0.1315,0.1315
+systolic_bp,0.0902,0.0902
+bpl_card,0.0496,0.0496
+creatinine,0.0211,0.0211
+hba1c,-0.0152,0.0152
+teaching,0.0042,0.0042
+beds,0.0023,0.0023
+admission_month,0.0008,0.0008
+admission_year,-0.0005,0.0005
